@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Thiruvenkadam Marasamy | Senior React &amp; React Native Engineer</title>
+    <meta name="description"
+        content="Portfolio of Thiruvenkadam Marasamy — Senior React &amp; React Native Engineer with 7+ years of experience architecting cross-platform mobile and web applications, real-time systems (MQTT), IoT, and enterprise cloud solutions." />
+    <meta name="keywords"
+        content="Thiruvenkadam Marasamy, Senior React Native Engineer, React.js, Next.js, Mobile Architect, Flutter, TypeScript, Redux, MQTT, Bengaluru, India" />
+    <meta name="author" content="Thiruvenkadam Marasamy" />
+
+    <!-- Cross-Browser Theme Colors -->
+    <meta name="theme-color" content="#0a0b10" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Apple Safari / iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Thiruvenkadam.m" />
+
+    <!-- Microsoft Edge / Windows -->
+    <meta name="msapplication-TileColor" content="#0a0b10" />
+    <meta name="msapplication-config" content="none" />
+
+    <!-- Open Graph (Facebook, LinkedIn, Opera, Brave) -->
+    <meta property="og:title" content="Thiruvenkadam Marasamy | Senior React & React Native Engineer" />
+    <meta property="og:description" content="Portfolio — 7+ years engineering cross-platform mobile & web applications, real-time MQTT, IoT, and enterprise cloud." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Thiruvenkadam Marasamy | Senior React & React Native Engineer" />
+    <meta name="twitter:description" content="7+ years engineering cross-platform mobile & web apps — React Native, MQTT, AWS, Flutter." />
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Background Canvas & Mesh Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Header & Navigation -->
+    <header class="site-header" id="header">
+        <div class="header-container">
+            <a href="#hero" class="brand-logo" aria-label="Home">
+                <span class="logo-box">TM</span>
+                <span class="logo-text">Thiruvenkadam<span class="dot">.M</span></span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="#about" class="nav-link"><i class="fa-regular fa-user"></i> About</a>
+                <a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a>
+                <a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a>
+                <a href="#projects" class="nav-link"><i class="fa-solid fa-layer-group"></i> Projects</a>
+                <a href="#architecture" class="nav-link"><i class="fa-solid fa-network-wired"></i> Architecture</a>
+                <a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+                <a href="#contact" class="nav-link"><i class="fa-regular fa-envelope"></i> Contact</a>
+            </nav>
+
+            <!-- Action Controls -->
+            <div class="header-actions">
+                <!-- Quick Search Command Button -->
+                <button class="cmd-btn" id="cmd-search-btn" title="Quick Search (Ctrl + K)" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span class="cmd-key">⌘K</span>
+                </button>
+
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark and Light Mode"
+                    title="Toggle Theme">
+                    <div class="theme-slider">
+                        <i class="fa-solid fa-moon icon-dark"></i>
+                        <i class="fa-solid fa-sun icon-light"></i>
+                    </div>
+                </button>
+
+                <!-- Resume Action Button -->
+                <a href="#resume-modal" class="btn btn-outline btn-sm desktop-only resume-trigger-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Resume
+                </a>
+
+                <!-- Mobile Hamburger Button -->
+                <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle Mobile Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="mobile-nav-drawer" id="mobile-drawer">
+            <nav class="mobile-nav">
+                <a href="#hero" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#about" class="mobile-nav-link"><i class="fa-regular fa-user"></i> About</a>
+                <a href="#skills" class="mobile-nav-link"><i class="fa-solid fa-code"></i> Technical Skills</a>
+                <a href="#experience" class="mobile-nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a>
+                <a href="#projects" class="mobile-nav-link"><i class="fa-solid fa-layer-group"></i> Featured
+                    Projects</a>
+                <a href="#architecture" class="mobile-nav-link"><i class="fa-solid fa-network-wired"></i> System
+                    Architecture</a>
+                <a href="#education" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+                <a href="#contact" class="mobile-nav-link"><i class="fa-regular fa-envelope"></i> Contact Me</a>
+                <div class="mobile-drawer-footer">
+                    <a href="#resume-modal" class="btn btn-primary btn-block resume-trigger-btn">
+                        <i class="fa-solid fa-file-pdf"></i> View & Download Resume
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ================= HERO SECTION ================= -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-status-pill animate-fade-in">
+                        <span class="status-pulse"></span>
+                        <span>Available for Senior Roles & Architecture Consulting</span>
+                    </div>
+
+                    <h1 class="hero-title animate-fade-in delay-1">
+                        Hi, I'm <span class="gradient-text">Thiruvenkadam Marasamy</span>
+                    </h1>
+
+                    <div class="hero-typed-wrapper animate-fade-in delay-2">
+                        <span class="typed-prefix">Specializing in</span>
+                        <span class="dynamic-typed-text" id="typed-text"></span>
+                        <span class="typed-cursor">|</span>
+                    </div>
+
+                    <p class="hero-description animate-fade-in delay-3">
+                        <strong>Senior React & React Native Engineer</strong> with <strong>7+ years</strong> of
+                        expertise architecting high-performance cross-platform mobile and web ecosystems. Trusted by
+                        enterprise clients across <strong>Sports-Tech, QSR, Cruise Tourism, IoT & B2B ERP</strong> to
+                        deliver sub-second real-time sync (MQTT), biometric verification (AWS Rekognition), and
+                        rock-solid App Store / Play Store deployments.
+                    </p>
+
+                    <div class="hero-cta-group animate-fade-in delay-4">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-rocket"></i> Explore Work
+                        </a>
+                        <a href="#contact" class="btn btn-glass">
+                            <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                        </a>
+                        <button class="btn btn-outline resume-trigger-btn" id="hero-resume-btn">
+                            <i class="fa-solid fa-file-arrow-down"></i> Resume
+                        </button>
+                    </div>
+
+                    <div class="hero-contact-strip animate-fade-in delay-5">
+                        <a href="mailto:thiruvenkadam.marasamy@gmail.com" class="contact-pill" title="Send Email">
+                            <i class="fa-solid fa-envelope"></i> thiruvenkadam.marasamy@gmail.com
+                        </a>
+                        <a href="tel:+919976056903" class="contact-pill" title="Direct Phone">
+                            <i class="fa-solid fa-phone"></i> +91 99760 56903
+                        </a>
+                        <span class="contact-pill"><i class="fa-solid fa-location-dot"></i> Bengaluru, India</span>
+                    </div>
+                </div>
+
+                <!-- Hero Interactive Visual Card -->
+                <div class="hero-visual animate-fade-in delay-3">
+                    <div class="hero-card-wrapper">
+                        <!-- Floating Tech Orbs -->
+                        <div class="floating-badge badge-top-right">
+                            <i class="fa-brands fa-react fa-spin-pulse"
+                                style="--fa-animation-duration: 12s; color: #00d8ff;"></i>
+                            <div>
+                                <span class="badge-title">React Native & React</span>
+                                <span class="badge-sub">7+ Years Mastery</span>
+                            </div>
+                        </div>
+
+                        <div class="floating-badge badge-bottom-left">
+                            <i class="fa-solid fa-bolt" style="color: #f59e0b;"></i>
+                            <div>
+                                <span class="badge-title">Real-Time Sync</span>
+                                <span class="badge-sub">MQTT & WebSockets</span>
+                            </div>
+                        </div>
+
+                        <!-- Main Interactive Code & Architecture Card -->
+                        <div class="code-terminal-card">
+                            <div class="terminal-header">
+                                <div class="terminal-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <div class="terminal-title">Thiruvenkadam.config.ts</div>
+                                <div class="terminal-action">
+                                    <span class="badge-live"><i class="fa-solid fa-circle"></i> Production Ready</span>
+                                </div>
+                            </div>
+                            <div class="terminal-body">
+                                <pre><code><span class="code-kw">const</span> <span class="code-var">seniorArchitect</span> = {
+  <span class="code-prop">name</span>: <span class="code-str">"Thiruvenkadam Marasamy"</span>,
+  <span class="code-prop">role</span>: <span class="code-str">"Senior React & React Native Engineer"</span>,
+  <span class="code-prop">experience</span>: <span class="code-str">"7+ Years"</span>,
+  <span class="code-prop">location</span>: <span class="code-str">"Bengaluru, Karnataka, India"</span>,
+  <span class="code-prop">coreEcosystem</span>: [
+    <span class="code-str">"React Native"</span>, <span class="code-str">"React.js"</span>, <span class="code-str">"TypeScript"</span>,
+    <span class="code-str">"Next.js"</span>, <span class="code-str">"Flutter"</span>, <span class="code-str">"Node.js"</span>
+  ],
+  <span class="code-prop">specialties</span>: {
+    <span class="code-prop">realtime</span>: <span class="code-str">"MQTT & WebSockets"</span>,
+    <span class="code-prop">aiBiometrics</span>: <span class="code-str">"AWS Rekognition KYC"</span>,
+    <span class="code-prop">offlineStorage</span>: <span class="code-str">"MMKV, SQLite, AsyncStorage"</span>,
+    <span class="code-prop">stateArchitecture</span>: <span class="code-str">"Redux Toolkit, TanStack Query, Zustand"</span>
+  },
+  <span class="code-prop">domains</span>: [<span class="code-str">"Sports-Tech"</span>, <span class="code-str">"QSR / Food"</span>, <span class="code-str">"Cruise Tourism"</span>, <span class="code-str">"IoT"</span>, <span class="code-str">"ERP"</span>]
+};</code></pre>
+                            </div>
+                            <div class="terminal-footer">
+                                <div class="terminal-stat">
+                                    <span class="stat-num">100%</span>
+                                    <span class="stat-lbl">Store Approval Rate</span>
+                                </div>
+                                <div class="terminal-stat">
+                                    <span class="stat-num">8+</span>
+                                    <span class="stat-lbl">Enterprise Apps</span>
+                                </div>
+                                <div class="terminal-stat">
+                                    <span class="stat-num">&lt; 100ms</span>
+                                    <span class="stat-lbl">Realtime Latency</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Marquee Ticker -->
+            <div class="hero-tech-strip">
+                <div class="marquee-track">
+                    <div class="tech-tag"><i class="fa-brands fa-react text-cyan"></i> React Native</div>
+                    <div class="tech-tag"><i class="fa-brands fa-react text-blue"></i> React.js</div>
+                    <div class="tech-tag"><i class="fa-brands fa-js text-yellow"></i> TypeScript / ES6+</div>
+                    <div class="tech-tag"><i class="fa-solid fa-n text-white"></i> Next.js</div>
+                    <div class="tech-tag"><i class="fa-solid fa-feather text-cyan"></i> Flutter & Dart</div>
+                    <div class="tech-tag"><i class="fa-brands fa-node text-green"></i> Node.js</div>
+                    <div class="tech-tag"><i class="fa-solid fa-cubes text-purple"></i> Redux Toolkit</div>
+                    <div class="tech-tag"><i class="fa-solid fa-arrows-rotate text-red"></i> TanStack Query</div>
+                    <div class="tech-tag"><i class="fa-solid fa-bolt text-yellow"></i> MQTT Real-Time</div>
+                    <div class="tech-tag"><i class="fa-brands fa-aws text-orange"></i> AWS (Rekognition & Cognito)</div>
+                    <div class="tech-tag"><i class="fa-solid fa-fire text-amber"></i> Firebase Ecosystem</div>
+                    <div class="tech-tag"><i class="fa-solid fa-database text-blue"></i> MMKV & SQLite</div>
+                    <div class="tech-tag"><i class="fa-solid fa-credit-card text-emerald"></i> Razorpay & Payments</div>
+                    <div class="tech-tag"><i class="fa-brands fa-apple text-white"></i> iOS & Android Native</div>
+
+                    <!-- Repeated for seamless loop -->
+                    <div class="tech-tag"><i class="fa-brands fa-react text-cyan"></i> React Native</div>
+                    <div class="tech-tag"><i class="fa-brands fa-react text-blue"></i> React.js</div>
+                    <div class="tech-tag"><i class="fa-brands fa-js text-yellow"></i> TypeScript / ES6+</div>
+                    <div class="tech-tag"><i class="fa-solid fa-n text-white"></i> Next.js</div>
+                    <div class="tech-tag"><i class="fa-solid fa-feather text-cyan"></i> Flutter & Dart</div>
+                    <div class="tech-tag"><i class="fa-brands fa-node text-green"></i> Node.js</div>
+                    <div class="tech-tag"><i class="fa-solid fa-cubes text-purple"></i> Redux Toolkit</div>
+                    <div class="tech-tag"><i class="fa-solid fa-arrows-rotate text-red"></i> TanStack Query</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= METRICS & HIGHLIGHTS ================= -->
+        <section class="metrics-section">
+            <div class="container">
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fa-solid fa-award"></i></div>
+                        <div class="metric-info">
+                            <span class="metric-value" data-counter="7">7</span><span class="metric-plus">+</span>
+                            <span class="metric-label">Years Professional Experience</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <div class="metric-info">
+                            <span class="metric-value" data-counter="8">8</span><span class="metric-plus">+</span>
+                            <span class="metric-label">Production Apps & Platforms</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fa-solid fa-cubes-stacked"></i></div>
+                        <div class="metric-info">
+                            <span class="metric-value" data-counter="5">5</span><span class="metric-plus">+</span>
+                            <span class="metric-label">Industry Verticals & Domains</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        <div class="metric-info">
+                            <span class="metric-value" data-counter="100">100</span><span class="metric-plus">%</span>
+                            <span class="metric-label">Store Deployment Success</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT & ARCHITECTURE PHILOSOPHY ================= -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Who I Am & How I Build</span>
+                    <h2 class="section-title">Architecting Scalable, Resilient Digital Products</h2>
+                    <p class="section-lead">
+                        Bridging high-performance mobile UI engineering with robust backend & cloud integrations.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left: Bio & Highlights -->
+                    <div class="about-bio">
+                        <div class="glass-card bio-card">
+                            <h3 class="card-title"><i class="fa-solid fa-user-tie"></i> Senior Engineering Profile</h3>
+                            <p>
+                                I am a <strong>Senior React & React Native Engineer</strong> with 7 years of hands-on
+                                experience building mission-critical mobile and web applications across India, the
+                                Middle East, and global markets.
+                            </p>
+                            <p>
+                                My core competency lies in architecting end-to-end multi-app ecosystems — from real-time
+                                <strong>MQTT sports companion apps</strong> and <strong>video KYC facial recognition
+                                    pipelines</strong> with AWS Rekognition, to enterprise <strong>QSR restaurant
+                                    ordering systems (KFC India)</strong> and <strong>IoT smart device hardware
+                                    controls</strong>.
+                            </p>
+                            <p>
+                                I focus heavily on <strong>MVVM and Feature-Based architectures</strong>,
+                                battery-efficient background services, high-throughput caching (MMKV/SQLite),
+                                frictionless payment gateways (Razorpay, PhonePe, myFatoorah), and automated App Store /
+                                Play Store pipelines.
+                            </p>
+
+                            <div class="bio-meta-grid">
+                                <div class="bio-meta-item">
+                                    <span class="meta-label">Primary Role</span>
+                                    <span class="meta-val">Senior React & React Native Engineer</span>
+                                </div>
+                                <div class="bio-meta-item">
+                                    <span class="meta-label">Education</span>
+                                    <span class="meta-val">Master of Computer Applications (MCA)</span>
+                                </div>
+                                <div class="bio-meta-item">
+                                    <span class="meta-label">Location</span>
+                                    <span class="meta-val">Bengaluru, Karnataka, India</span>
+                                </div>
+                                <div class="bio-meta-item">
+                                    <span class="meta-label">Work Mode</span>
+                                    <span class="meta-val">Hybrid / Remote / Full-time</span>
+                                </div>
+                            </div>
+
+                            <div class="bio-actions">
+                                <a href="https://linkedin.com/in/thiruvenkadam-marasamy/" target="_blank"
+                                    rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+                                </a>
+                                <a href="mailto:thiruvenkadam.marasamy@gmail.com" class="btn btn-sm btn-primary">
+                                    <i class="fa-solid fa-paper-plane"></i> Quick Hire / Email
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Architectural Pillars -->
+                    <div class="about-pillars">
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                            <div>
+                                <h4>Sub-Second Real-Time Sync</h4>
+                                <p>Engineered multi-client MQTT & WebSocket architectures for live tournament scores,
+                                    umpire scoring, and telemetry updates with instant UI reactivity.</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <div>
+                                <h4>IoT & Hardware Provisioning</h4>
+                                <p>Developed end-to-end Wi-Fi setup flows, Bluetooth/network device telemetry, and
+                                    remote hardware state management (ON/OFF/UV) for connected IoT devices.</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <h4>AI-Powered Biometric & KYC</h4>
+                                <p>Integrated AWS Rekognition for automated facial matching, live liveness verification,
+                                    and OCR identity extraction directly in React Native applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="pillar-card">
+                            <div class="pillar-icon"><i class="fa-solid fa-layer-group"></i></div>
+                            <div>
+                                <h4>Robust Modular Architecture</h4>
+                                <p>Strict adherence to MVVM, Clean Architecture, TanStack Query caching, MMKV storage,
+                                    and feature-sliced state for maximum maintainability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SKILLS MATRIX ================= -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Technical Proficiency</span>
+                    <h2 class="section-title">Comprehensive Skills & Tooling</h2>
+                    <p class="section-lead">7+ years of deep domain expertise across mobile, web, backend, cloud, and
+                        hardware integrations.</p>
+                </div>
+
+                <!-- Skill Filter Tabs -->
+                <div class="skills-filter-nav">
+                    <button class="skill-tab active" data-filter="all">All Skills</button>
+                    <button class="skill-tab" data-filter="mobile">Mobile & Cross-Platform</button>
+                    <button class="skill-tab" data-filter="frontend">Frontend & Web</button>
+                    <button class="skill-tab" data-filter="state">State & Data Flow</button>
+                    <button class="skill-tab" data-filter="cloud">Cloud, Real-Time & AI</button>
+                    <button class="skill-tab" data-filter="storage">Storage & Payments</button>
+                    <button class="skill-tab" data-filter="tools">DevOps & Platforms</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid" id="skills-container">
+                    <!-- Mobile -->
+                    <div class="skill-card" data-category="mobile">
+                        <div class="skill-header">
+                            <div class="skill-icon text-cyan"><i class="fa-brands fa-react"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>React Native</h4>
+                                <span class="skill-level">Expert • 7 Years</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Cross-platform architecture, Native Modules, Deep Linking, Performance
+                            profiling, JSI / New Architecture.</p>
+                        <div class="skill-tags">
+                            <span>iOS & Android</span>
+                            <span>Navigation v6</span>
+                            <span>App Store</span>
+                            <span>Play Store</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="mobile">
+                        <div class="skill-header">
+                            <div class="skill-icon text-blue"><i class="fa-solid fa-feather"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>Flutter & Dart</h4>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">High-performance custom UI widgets, Hive-box local database, state
+                            management, Katara & Umpire scoring apps.</p>
+                        <div class="skill-tags">
+                            <span>Dart</span>
+                            <span>Hive</span>
+                            <span>Provider/Bloc</span>
+                            <span>Multi-Platform</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skill-card" data-category="frontend">
+                        <div class="skill-header">
+                            <div class="skill-icon text-yellow"><i class="fa-brands fa-js"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>TypeScript & JavaScript</h4>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Strict type safety, Generics, ESNext features, Async programming,
+                            functional paradigms and Clean Code.</p>
+                        <div class="skill-tags">
+                            <span>Strict Types</span>
+                            <span>ES2024</span>
+                            <span>Interfaces</span>
+                            <span>Modular TS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="frontend">
+                        <div class="skill-header">
+                            <div class="skill-icon text-cyan"><i class="fa-brands fa-react"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>React.js & Next.js</h4>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">SSR, SSG, Server Components, Custom Hooks, Micro-frontends, Back-office
+                            Admin portals, and Guest Room Service apps.</p>
+                        <div class="skill-tags">
+                            <span>Next.js 14</span>
+                            <span>React Hooks</span>
+                            <span>SSR / CSR</span>
+                            <span>Enterprise Portals</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="frontend">
+                        <div class="skill-header">
+                            <div class="skill-icon text-green"><i class="fa-brands fa-vuejs"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>Vue.js</h4>
+                                <span class="skill-level">Proficient</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Component-driven architectures, reactive live ad overlays for real-time
+                            sports broadcasting and livestream tools.</p>
+                        <div class="skill-tags">
+                            <span>Composition API</span>
+                            <span>Live Overlays</span>
+                            <span>Vue Router</span>
+                        </div>
+                    </div>
+
+                    <!-- State Management -->
+                    <div class="skill-card" data-category="state">
+                        <div class="skill-header">
+                            <div class="skill-icon text-purple"><i class="fa-solid fa-cubes"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>Redux Toolkit & Zustand</h4>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Predictable global state, immutable updates, RTK Query, middleware
+                            integration, and light-weight Zustand stores.</p>
+                        <div class="skill-tags">
+                            <span>Redux Slices</span>
+                            <span>RTK Query</span>
+                            <span>Zustand</span>
+                            <span>Context API</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="state">
+                        <div class="skill-header">
+                            <div class="skill-icon text-red"><i class="fa-solid fa-arrows-rotate"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>TanStack Query (React Query)</h4>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Asynchronous server-state management, automatic caching, optimistic
+                            mutations, background refetching, and pagination.</p>
+                        <div class="skill-tags">
+                            <span>Query Invalidation</span>
+                            <span>Infinite Scroll</span>
+                            <span>Offline Mutations</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend / CMS -->
+                    <div class="skill-card" data-category="cloud">
+                        <div class="skill-header">
+                            <div class="skill-icon text-green"><i class="fa-brands fa-node-js"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>Node.js & REST / GraphQL</h4>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Backend microservices, Express.js, GraphQL queries/mutations, Strapi CMS
+                            headless content management, and API design.</p>
+                        <div class="skill-tags">
+                            <span>Node.js</span>
+                            <span>Strapi CMS</span>
+                            <span>REST APIs</span>
+                            <span>GraphQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Real-Time & Cloud -->
+                    <div class="skill-card" data-category="cloud">
+                        <div class="skill-header">
+                            <div class="skill-icon text-yellow"><i class="fa-solid fa-bolt"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>MQTT Real-Time & Sockets</h4>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Lightweight pub/sub messaging protocols for real-time live badminton
+                            scoring, low-latency score sync, and IoT telemetry.</p>
+                        <div class="skill-tags">
+                            <span>MQTT Broker</span>
+                            <span>Pub/Sub</span>
+                            <span>Low Latency</span>
+                            <span>QoS Protocols</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="cloud">
+                        <div class="skill-header">
+                            <div class="skill-icon text-orange"><i class="fa-brands fa-aws"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>AWS Cloud Services</h4>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">AWS Rekognition (Facial Recognition & OCR KYC verification), AWS Cognito
+                            User Pools, S3 asset buckets, CloudFront.</p>
+                        <div class="skill-tags">
+                            <span>AWS Rekognition</span>
+                            <span>Cognito</span>
+                            <span>S3 & CloudFront</span>
+                            <span>Video KYC</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card" data-category="cloud">
+                        <div class="skill-header">
+                            <div class="skill-icon text-amber"><i class="fa-solid fa-fire"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>Firebase Ecosystem</h4>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Firebase Authentication, Cloud Messaging (FCM Push Notifications),
+                            Crashlytics, Analytics, and Firestore integration.</p>
+                        <div class="skill-tags">
+                            <span>FCM Push</span>
+                            <span>Auth</span>
+                            <span>Crashlytics</span>
+                            <span>Remote Config</span>
+                        </div>
+                    </div>
+
+                    <!-- Storage & Databases -->
+                    <div class="skill-card" data-category="storage">
+                        <div class="skill-header">
+                            <div class="skill-icon text-emerald"><i class="fa-solid fa-database"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>MMKV, SQLite & AsyncStorage</h4>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Ultra-fast synchronous storage with MMKV, relational embedded SQLite
+                            databases for offline ERP data, and encrypted caching.</p>
+                        <div class="skill-tags">
+                            <span>MMKV (High Speed)</span>
+                            <span>SQLite</span>
+                            <span>Offline-First</span>
+                        </div>
+                    </div>
+
+                    <!-- Payments -->
+                    <div class="skill-card" data-category="storage">
+                        <div class="skill-header">
+                            <div class="skill-icon text-blue"><i class="fa-solid fa-credit-card"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>Payment Gateways</h4>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Seamless checkout flows, webhook handling, and SDK integrations for
+                            domestic and international payment processing.</p>
+                        <div class="skill-tags">
+                            <span>Razorpay</span>
+                            <span>PhonePe</span>
+                            <span>myFatoorah (GCC)</span>
+                            <span>In-App Purchases</span>
+                        </div>
+                    </div>
+
+                    <!-- Platforms & Tools -->
+                    <div class="skill-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon text-purple"><i class="fa-solid fa-toolbox"></i></div>
+                            <div class="skill-title-wrap">
+                                <h4>Platforms, Tools & Agile</h4>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                        </div>
+                        <p class="skill-desc">Android Studio, Xcode, Google Play Console, Apple App Store Connect, IBM
+                            MobileFirst, Git, Jira, Azure Boards.</p>
+                        <div class="skill-tags">
+                            <span>Xcode / Android Studio</span>
+                            <span>App Store Connect</span>
+                            <span>Git / GitLab</span>
+                            <span>Jira / Azure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= WORK EXPERIENCE TIMELINE ================= -->
+        <section class="section experience-section" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Career Journey</span>
+                    <h2 class="section-title">Work Experience & Key Impact</h2>
+                    <p class="section-lead">7 years of driving engineering excellence for leading product companies and
+                        enterprise clients.</p>
+                </div>
+
+                <div class="timeline-container">
+                    <!-- Timeline Item 1: Adecco / Cognizant -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <div class="exp-header">
+                                <div>
+                                    <div class="exp-badge">Current / Recent Engagement</div>
+                                    <h3 class="exp-role">React & React Native Engineer</h3>
+                                    <div class="exp-company">
+                                        <strong>Adecco India</strong> <span class="client-tag">(Client: Cognizant
+                                            Technology Solutions)</span>
+                                    </div>
+                                </div>
+                                <div class="exp-period">
+                                    <i class="fa-regular fa-calendar"></i> Sep 2025 – Apr 2026
+                                </div>
+                            </div>
+
+                            <div class="exp-projects">
+                                <!-- Project A -->
+                                <div class="exp-project-box">
+                                    <div class="project-box-header">
+                                        <div class="p-title"><i class="fa-solid fa-utensils text-red"></i> <strong>KFC
+                                                India – Restaurant Ordering App</strong></div>
+                                        <span class="domain-tag">QSR / Food-Tech</span>
+                                    </div>
+                                    <ul class="exp-bullet-list">
+                                        <li>Architected and implemented core customer ordering features in the
+                                            <strong>KFC India React Native</strong> food ordering mobile app.
+                                        </li>
+                                        <li>Engineered an intuitive <strong>QR-code-based deep-link table ordering
+                                                flow</strong>, drastically reducing in-restaurant wait times and
+                                            streamlining table service.</li>
+                                        <li>Designed dynamic free-delivery promo banners, take-away food preparation
+                                            tracking screens, and automated <strong>push notification flows</strong>
+                                            when food is ready for pickup.</li>
+                                        <li>Optimized rendering performance and network payload caching for
+                                            lightning-fast menu browsing across budget Android and iOS devices.</li>
+                                    </ul>
+                                    <div class="exp-tech-tags">
+                                        <span>React Native</span>
+                                        <span>TypeScript</span>
+                                        <span>QR Deep Linking</span>
+                                        <span>Push Notifications</span>
+                                        <span>Redux Toolkit</span>
+                                    </div>
+                                </div>
+
+                                <!-- Project B -->
+                                <div class="exp-project-box">
+                                    <div class="project-box-header">
+                                        <div class="p-title"><i class="fa-solid fa-ship text-blue"></i> <strong>Royal
+                                                Caribbean Cruises – Room Service Management App</strong></div>
+                                        <span class="domain-tag">Tourism & Hospitality</span>
+                                    </div>
+                                    <ul class="exp-bullet-list">
+                                        <li>Built high-reliability room-service ordering and real-time status tracking
+                                            flows for a <strong>React with Next.js</strong> application used by onboard
+                                            cruise ship guests.</li>
+                                        <li>Integrated robust deep linking and real-time status update pipelines
+                                            tailored to shipboard intranet and fluctuating satellite connectivity.</li>
+                                        <li>Collaborated with cross-functional global teams to ensure stringent
+                                            enterprise UX, accessibility, and 99.9% uptime in a live cruise-ship
+                                            environment.</li>
+                                    </ul>
+                                    <div class="exp-tech-tags">
+                                        <span>React.js</span>
+                                        <span>Next.js</span>
+                                        <span>Real-time Status Tracking</span>
+                                        <span>Deep Linking</span>
+                                        <span>Enterprise UX</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2: ImpulseIdea Global LLC -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-role">Senior Software Engineer</h3>
+                                    <div class="exp-company">
+                                        <strong>ImpulseIdea Global LLC</strong>
+                                    </div>
+                                </div>
+                                <div class="exp-period">
+                                    <i class="fa-regular fa-calendar"></i> Jul 2024 – Sep 2025
+                                </div>
+                            </div>
+
+                            <div class="exp-projects">
+                                <!-- Project A -->
+                                <div class="exp-project-box">
+                                    <div class="project-box-header">
+                                        <div class="p-title"><i class="fa-solid fa-trophy text-yellow"></i>
+                                            <strong>Fan4ever – Sports Companion Platform (Badminton Ecosystem)</strong>
+                                        </div>
+                                        <span class="domain-tag">Sports-Tech / Real-Time</span>
+                                    </div>
+                                    <p class="exp-summary">Architected and delivered Fan4ever, an extensive
+                                        6-application sports companion ecosystem with real-time score synchronization,
+                                        social media feeds, live streaming, multi-language support, and in-app payments,
+                                        successfully published on both App Store and Google Play Store.</p>
+
+                                    <div class="sub-suite-grid">
+                                        <div class="sub-suite-item">
+                                            <strong>Fan4ever App:</strong> React Native, TypeScript, Redux, MQTT,
+                                            Firebase, Razorpay, Geolocation.
+                                        </div>
+                                        <div class="sub-suite-item">
+                                            <strong>Club Admin App:</strong> React Native, MVVM Architecture, TanStack
+                                            Query.
+                                        </div>
+                                        <div class="sub-suite-item">
+                                            <strong>Umpire Scorer App:</strong> Flutter, Dart, Hive-box offline storage.
+                                        </div>
+                                        <div class="sub-suite-item">
+                                            <strong>Back-Office Admin:</strong> React.js, Redux, Node.js.
+                                        </div>
+                                        <div class="sub-suite-item">
+                                            <strong>Ad Overlay Livestream Tool:</strong> Vue.js, Strapi CMS.
+                                        </div>
+                                        <div class="sub-suite-item">
+                                            <strong>Fan4ever Portal:</strong> React with Next.js, Strapi CMS.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project B -->
+                                <div class="exp-project-box">
+                                    <div class="project-box-header">
+                                        <div class="p-title"><i class="fa-solid fa-id-card-clip text-purple"></i>
+                                            <strong>Video-Based KYC Verification</strong>
+                                        </div>
+                                        <span class="domain-tag">AI / FinTech Security</span>
+                                    </div>
+                                    <ul class="exp-bullet-list">
+                                        <li>Developed a video-based KYC verification pipeline in <strong>React Native
+                                                using AWS Rekognition</strong> for facial recognition and automated OCR
+                                            text extraction from identity cards.</li>
+                                        <li>Reduced user onboarding friction and manual verification effort by over 60%
+                                            while drastically improving document fraud detection.</li>
+                                        <li>Integrated <strong>Strapi CMS</strong> for dynamic onboarding flow
+                                            configuration without requiring new App Store / Play Store releases.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Project C -->
+                                <div class="exp-project-box">
+                                    <div class="project-box-header">
+                                        <div class="p-title"><i class="fa-solid fa-landmark text-cyan"></i>
+                                            <strong>Katara – Cultural Village Discovery App</strong>
+                                        </div>
+                                        <span class="domain-tag">Tourism & Culture (Qatar)</span>
+                                    </div>
+                                    <ul class="exp-bullet-list">
+                                        <li>Built the <strong>Katara Flutter-based cultural discovery
+                                                application</strong> for Katara Cultural Village (Qatar), featuring
+                                            interactive maps, museums, monuments, and points of interest.</li>
+                                        <li>Integrated a headless <strong>Strapi CMS</strong> backend for instantaneous
+                                            bilingual (Arabic / English) content management.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3: TekAfforde Solutions -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                            <div class="marker-line"></div>
+                        </div>
+                        <div class="timeline-content glass-card">
+                            <div class="exp-header">
+                                <div>
+                                    <h3 class="exp-role">Software Engineer</h3>
+                                    <div class="exp-company">
+                                        <strong>TekAfforde Solutions Pvt Ltd</strong>
+                                    </div>
+                                </div>
+                                <div class="exp-period">
+                                    <i class="fa-regular fa-calendar"></i> May 2019 – Jun 2024
+                                </div>
+                            </div>
+
+                            <div class="exp-projects">
+                                <!-- Project A -->
+                                <div class="exp-project-box">
+                                    <div class="project-box-header">
+                                        <div class="p-title"><i class="fa-solid fa-users-gear text-emerald"></i>
+                                            <strong>Irukkaa – Blue-Collar Job Search Platform</strong>
+                                        </div>
+                                        <span class="domain-tag">Marketplace & Job Portal</span>
+                                    </div>
+                                    <ul class="exp-bullet-list">
+                                        <li>Built <strong>Irukkaa</strong>, a comprehensive React Native platform
+                                            enabling blue-collar workers to discover and post jobs by location and skill
+                                            category across agriculture, construction, and manufacturing.</li>
+                                        <li>Engineered dual user roles (Worker / Resource Owner), location-filtered
+                                            search, real-time job alerts, and local product promotions.</li>
+                                        <li>Integrated Firebase Authentication, Push Notifications, and created the
+                                            Back-Office Admin Web App (React.js, Redux, Node.js).</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Project B -->
+                                <div class="exp-project-box">
+                                    <div class="project-box-header">
+                                        <div class="p-title"><i class="fa-solid fa-wifi text-cyan"></i> <strong>Aerem –
+                                                Smart Device Control App (IoT)</strong></div>
+                                        <span class="domain-tag">IoT & Smart Hardware</span>
+                                    </div>
+                                    <ul class="exp-bullet-list">
+                                        <li>Built user authentication, multi-language support (English / Hindi), and
+                                            remote hardware management (ON/OFF/UV disinfection control) for Aerem IoT
+                                            devices.</li>
+                                        <li>Developed automated Wi-Fi provisioning setup flows, network connectivity
+                                            state handlers, real-time homepage device telemetry dashboard, and in-app
+                                            user guide.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Project C -->
+                                <div class="exp-project-box">
+                                    <div class="project-box-header">
+                                        <div class="p-title"><i class="fa-solid fa-briefcase text-blue"></i> <strong>TA
+                                                Back-Office & Services – B2B ERP App</strong></div>
+                                        <span class="domain-tag">Enterprise B2B ERP</span>
+                                    </div>
+                                    <ul class="exp-bullet-list">
+                                        <li>Developed a React Native B2B ERP application for the home-appliance and
+                                            vehicle service sectors with offline SQLite data management.</li>
+                                        <li>Integrated Firebase Auth, REST APIs, and Razorpay for secure multi-tier
+                                            merchant payment transactions.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FEATURED PROJECTS SHOWCASE ================= -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Portfolio Portfolio Showcase</span>
+                    <h2 class="section-title">Featured Enterprise & Cross-Platform Products</h2>
+                    <p class="section-lead">A curated selection of production applications engineered for scale,
+                        reliability, and rich user experience.</p>
+                </div>
+
+                <!-- Project Filter Controls -->
+                <div class="project-filter-nav">
+                    <button class="filter-btn active" data-project-filter="all">All Projects</button>
+                    <button class="filter-btn" data-project-filter="mobile">Mobile Apps (React Native/Flutter)</button>
+                    <button class="filter-btn" data-project-filter="web">Web & Next.js</button>
+                    <button class="filter-btn" data-project-filter="iot">IoT & AI Systems</button>
+                </div>
+
+                <!-- Project Cards Grid -->
+                <div class="projects-grid">
+                    <!-- Project 1: Fan4ever Ecosystem -->
+                    <div class="project-card" data-category="mobile web">
+                        <div class="project-card-banner banner-sports">
+                            <div class="project-domain-badge"><i class="fa-solid fa-trophy"></i> Sports-Tech Platform
+                            </div>
+                            <div class="project-icon-visual"><i class="fa-solid fa-baseball-bat-ball"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-header-info">
+                                <h3 class="project-name">Fan4ever Sports Companion Platform</h3>
+                                <span class="project-role-badge">Lead Architect</span>
+                            </div>
+                            <p class="project-description">
+                                Multi-application sports ecosystem featuring real-time sub-second MQTT score
+                                synchronization, umpire match scoring, live streaming with dynamic ad overlay, and
+                                in-app tournament registrations. Published on App Store & Play Store.
+                            </p>
+
+                            <div class="project-highlights">
+                                <div><i class="fa-solid fa-check text-green"></i> 6 apps suite (Mobile, Admin, Umpire
+                                    Scorer, Live Overlay, Next.js Web)</div>
+                                <div><i class="fa-solid fa-check text-green"></i> Sub-second MQTT pub/sub live match
+                                    sync</div>
+                                <div><i class="fa-solid fa-check text-green"></i> In-app payments & Razorpay integration
+                                </div>
+                            </div>
+
+                            <div class="project-stack">
+                                <span>React Native</span>
+                                <span>TypeScript</span>
+                                <span>MQTT</span>
+                                <span>Flutter</span>
+                                <span>Next.js</span>
+                                <span>Strapi CMS</span>
+                            </div>
+
+                            <div class="project-card-footer">
+                                <button class="btn btn-sm btn-outline view-details-btn" data-project="fan4ever">
+                                    <i class="fa-solid fa-circle-info"></i> System Architecture
+                                </button>
+                                <span class="status-indicator live"><i class="fa-solid fa-circle"></i> App Store / Play
+                                    Store</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: KFC India Restaurant Ordering App -->
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-card-banner banner-qsr">
+                            <div class="project-domain-badge"><i class="fa-solid fa-utensils"></i> Enterprise QSR</div>
+                            <div class="project-icon-visual"><i class="fa-solid fa-burger"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-header-info">
+                                <h3 class="project-name">KFC India Restaurant Ordering App</h3>
+                                <span class="project-role-badge">React Native Engineer</span>
+                            </div>
+                            <p class="project-description">
+                                Streamlined restaurant customer ordering app for millions of KFC India patrons. Features
+                                table QR-code deep-link ordering, live order preparation visualizer, food-ready push
+                                notifications, and dynamic promotional banners.
+                            </p>
+
+                            <div class="project-highlights">
+                                <div><i class="fa-solid fa-check text-green"></i> Instant QR table ordering flow via
+                                    deep links</div>
+                                <div><i class="fa-solid fa-check text-green"></i> Real-time food prep & push
+                                    notification pipeline</div>
+                                <div><i class="fa-solid fa-check text-green"></i> High-traffic menu caching & responsive
+                                    UI</div>
+                            </div>
+
+                            <div class="project-stack">
+                                <span>React Native</span>
+                                <span>TypeScript</span>
+                                <span>Redux Toolkit</span>
+                                <span>Deep Linking</span>
+                                <span>Push Notifications</span>
+                            </div>
+
+                            <div class="project-card-footer">
+                                <button class="btn btn-sm btn-outline view-details-btn" data-project="kfc">
+                                    <i class="fa-solid fa-circle-info"></i> Flow Architecture
+                                </button>
+                                <span class="status-indicator live"><i class="fa-solid fa-circle"></i> Production
+                                    App</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Royal Caribbean Cruises -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-card-banner banner-cruise">
+                            <div class="project-domain-badge"><i class="fa-solid fa-ship"></i> Tourism & Hospitality
+                            </div>
+                            <div class="project-icon-visual"><i class="fa-solid fa-compass"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-header-info">
+                                <h3 class="project-name">Royal Caribbean Room Service App</h3>
+                                <span class="project-role-badge">React & Next.js Engineer</span>
+                            </div>
+                            <p class="project-description">
+                                Premium guest room-service ordering and live fulfillment tracking system designed for
+                                cruise-ship guests, engineered for high reliability over shipboard network
+                                infrastructures and international accessibility standards.
+                            </p>
+
+                            <div class="project-highlights">
+                                <div><i class="fa-solid fa-check text-green"></i> React & Next.js SSR architecture for
+                                    fast loads</div>
+                                <div><i class="fa-solid fa-check text-green"></i> Real-time status update & deep linking
+                                    system</div>
+                                <div><i class="fa-solid fa-check text-green"></i> Enterprise-grade UX & accessibility
+                                </div>
+                            </div>
+
+                            <div class="project-stack">
+                                <span>React.js</span>
+                                <span>Next.js</span>
+                                <span>TypeScript</span>
+                                <span>RESTful APIs</span>
+                                <span>Enterprise UX</span>
+                            </div>
+
+                            <div class="project-card-footer">
+                                <button class="btn btn-sm btn-outline view-details-btn" data-project="royal">
+                                    <i class="fa-solid fa-circle-info"></i> Project Details
+                                </button>
+                                <span class="status-indicator live"><i class="fa-solid fa-circle"></i> Onboard
+                                    Fleet</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Video-Based KYC Verification -->
+                    <div class="project-card" data-category="mobile iot">
+                        <div class="project-card-banner banner-kyc">
+                            <div class="project-domain-badge"><i class="fa-solid fa-id-card"></i> AI & Identity Security
+                            </div>
+                            <div class="project-icon-visual"><i class="fa-solid fa-camera"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-header-info">
+                                <h3 class="project-name">Video-Based KYC Verification System</h3>
+                                <span class="project-role-badge">Senior Engineer</span>
+                            </div>
+                            <p class="project-description">
+                                Automated video KYC identity verification module embedded into React Native apps.
+                                Integrates AWS Rekognition for facial comparison and OCR identity document parsing,
+                                coupled with headless Strapi CMS dynamic step config.
+                            </p>
+
+                            <div class="project-highlights">
+                                <div><i class="fa-solid fa-check text-green"></i> AWS Rekognition facial comparison &
+                                    liveness</div>
+                                <div><i class="fa-solid fa-check text-green"></i> Automated OCR text extraction from IDs
+                                </div>
+                                <div><i class="fa-solid fa-check text-green"></i> Strapi CMS dynamic workflow updates
+                                </div>
+                            </div>
+
+                            <div class="project-stack">
+                                <span>React Native</span>
+                                <span>AWS Rekognition</span>
+                                <span>Strapi CMS</span>
+                                <span>TypeScript</span>
+                                <span>Node.js</span>
+                            </div>
+
+                            <div class="project-card-footer">
+                                <button class="btn btn-sm btn-outline view-details-btn" data-project="kyc">
+                                    <i class="fa-solid fa-circle-info"></i> AI Pipeline
+                                </button>
+                                <span class="status-indicator security"><i class="fa-solid fa-shield"></i> FinTech
+                                    Verified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Aerem IoT Smart Device Control -->
+                    <div class="project-card" data-category="mobile iot">
+                        <div class="project-card-banner banner-iot">
+                            <div class="project-domain-badge"><i class="fa-solid fa-wifi"></i> IoT & Hardware Telemetry
+                            </div>
+                            <div class="project-icon-visual"><i class="fa-solid fa-microchip"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-header-info">
+                                <h3 class="project-name">Aerem Smart Device Control App</h3>
+                                <span class="project-role-badge">Mobile Developer</span>
+                            </div>
+                            <p class="project-description">
+                                Mobile app for hardware device management featuring automated Wi-Fi provisioning,
+                                network status telemetry, and real-time remote commands (ON/OFF/UV disinfection control)
+                                with multi-language support (English & Hindi).
+                            </p>
+
+                            <div class="project-highlights">
+                                <div><i class="fa-solid fa-check text-green"></i> Hardware Wi-Fi setup & network state
+                                    telemetry</div>
+                                <div><i class="fa-solid fa-check text-green"></i> Remote UV & Power control commands
+                                </div>
+                                <div><i class="fa-solid fa-check text-green"></i> English & Hindi bilingual localization
+                                </div>
+                            </div>
+
+                            <div class="project-stack">
+                                <span>React Native</span>
+                                <span>IoT Telemetry</span>
+                                <span>Wi-Fi Provisioning</span>
+                                <span>i18n Localization</span>
+                                <span>SQLite</span>
+                            </div>
+
+                            <div class="project-card-footer">
+                                <button class="btn btn-sm btn-outline view-details-btn" data-project="aerem">
+                                    <i class="fa-solid fa-circle-info"></i> IoT Architecture
+                                </button>
+                                <span class="status-indicator iot"><i class="fa-solid fa-plug"></i> Hardware
+                                    Connected</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Irukkaa Job Search Platform -->
+                    <div class="project-card" data-category="mobile web">
+                        <div class="project-card-banner banner-irukkaa">
+                            <div class="project-domain-badge"><i class="fa-solid fa-users"></i> Marketplace & Jobs</div>
+                            <div class="project-icon-visual"><i class="fa-solid fa-briefcase"></i></div>
+                        </div>
+                        <div class="project-card-body">
+                            <div class="project-header-info">
+                                <h3 class="project-name">Irukkaa Blue-Collar Job Search Platform</h3>
+                                <span class="project-role-badge">Full-Stack Engineer</span>
+                            </div>
+                            <p class="project-description">
+                                Job portal connecting blue-collar workers and resource owners across agriculture,
+                                construction, and manufacturing. Includes real-time job alerts, location matching, local
+                                product promotion, and back-office admin dashboard.
+                            </p>
+
+                            <div class="project-highlights">
+                                <div><i class="fa-solid fa-check text-green"></i> Dual user roles (Worker / Employer)
+                                </div>
+                                <div><i class="fa-solid fa-check text-green"></i> Firebase push notifications &
+                                    real-time alerts</div>
+                                <div><i class="fa-solid fa-check text-green"></i> React.js, Redux & Node.js Back-Office
+                                    Admin</div>
+                            </div>
+
+                            <div class="project-stack">
+                                <span>React Native</span>
+                                <span>Firebase Auth & FCM</span>
+                                <span>React.js</span>
+                                <span>Redux</span>
+                                <span>Node.js</span>
+                            </div>
+
+                            <div class="project-card-footer">
+                                <button class="btn btn-sm btn-outline view-details-btn" data-project="irukkaa">
+                                    <i class="fa-solid fa-circle-info"></i> Architecture
+                                </button>
+                                <span class="status-indicator live"><i class="fa-solid fa-circle"></i> Production</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SYSTEM ARCHITECTURE & DOMAIN MASTERY ================= -->
+        <section class="section architecture-section" id="architecture">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Engineering Excellence</span>
+                    <h2 class="section-title">System Design & Architectural Patterns</h2>
+                    <p class="section-lead">Deep dive into proven patterns used to achieve sub-second latency, offline
+                        reliability, and scalable state.</p>
+                </div>
+
+                <div class="arch-cards-grid">
+                    <!-- Arch 1: Real-Time MQTT Ecosystem -->
+                    <div class="arch-card glass-card">
+                        <div class="arch-card-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+                        <h3>Real-Time Low-Latency Score Sync (MQTT)</h3>
+                        <p class="arch-desc">
+                            Engineered for high-intensity sports events (Fan4ever Badminton) where multiple stakeholders
+                            (Umpire, Fan, Club Admin, Livestream Ad Overlay) require sub-second state convergence.
+                        </p>
+                        <div class="arch-flow-box">
+                            <div class="flow-step">
+                                <span class="step-num">1</span>
+                                <span class="step-text"><strong>Umpire Scorer App (Flutter)</strong> enters point ->
+                                    writes to local Hive-box -> publishes MQTT event.</span>
+                            </div>
+                            <div class="flow-step">
+                                <span class="step-num">2</span>
+                                <span class="step-text"><strong>MQTT Broker (QoS 1)</strong> broadcasts delta topic to
+                                    subscribed listener channels.</span>
+                            </div>
+                            <div class="flow-step">
+                                <span class="step-num">3</span>
+                                <span class="step-text"><strong>Fan App (React Native) & Livestream Overlay
+                                        (Vue.js)</strong> mutate local Redux/state in &lt;100ms.</span>
+                            </div>
+                        </div>
+                        <div class="arch-meta">
+                            <span class="tech-badge">MQTT</span>
+                            <span class="tech-badge">WebSockets</span>
+                            <span class="tech-badge">Hive-Box</span>
+                            <span class="tech-badge">Redux Toolkit</span>
+                        </div>
+                    </div>
+
+                    <!-- Arch 2: AI Video KYC & Identity Pipeline -->
+                    <div class="arch-card glass-card">
+                        <div class="arch-card-icon"><i class="fa-solid fa-face-smile"></i></div>
+                        <h3>AWS Rekognition Video KYC Verification</h3>
+                        <p class="arch-desc">
+                            Streamlined identity verification reducing manual review time by 60% with on-device camera
+                            guidance and serverless AWS facial matching.
+                        </p>
+                        <div class="arch-flow-box">
+                            <div class="flow-step">
+                                <span class="step-num">1</span>
+                                <span class="step-text"><strong>Strapi CMS</strong> delivers dynamic KYC step schema &
+                                    country ID requirements to React Native app.</span>
+                            </div>
+                            <div class="flow-step">
+                                <span class="step-num">2</span>
+                                <span class="step-text"><strong>Video Stream Capture</strong> runs liveness test,
+                                    captures key frames, and uploads to secure AWS S3 bucket.</span>
+                            </div>
+                            <div class="flow-step">
+                                <span class="step-num">3</span>
+                                <span class="step-text"><strong>AWS Rekognition</strong> extracts OCR text from ID and
+                                    performs 99.4% confidence face-match against video frame.</span>
+                            </div>
+                        </div>
+                        <div class="arch-meta">
+                            <span class="tech-badge">AWS Rekognition</span>
+                            <span class="tech-badge">AWS S3</span>
+                            <span class="tech-badge">Strapi Headless</span>
+                            <span class="tech-badge">React Native Camera</span>
+                        </div>
+                    </div>
+
+                    <!-- Arch 3: Offline-First & High-Speed Storage -->
+                    <div class="arch-card glass-card">
+                        <div class="arch-card-icon"><i class="fa-solid fa-database"></i></div>
+                        <h3>Offline-First & Fast Synchronous Storage</h3>
+                        <p class="arch-desc">
+                            Ensuring flawless app experience even under fluctuating networks or zero connectivity
+                            (Cruise Ships, IoT Provisioning, B2B Field ERP).
+                        </p>
+                        <div class="arch-flow-box">
+                            <div class="flow-step">
+                                <span class="step-num">1</span>
+                                <span class="step-text"><strong>MMKV Synchronous Engine:</strong> 30x faster than
+                                    standard AsyncStorage for instantaneous user preference loads.</span>
+                            </div>
+                            <div class="flow-step">
+                                <span class="step-num">2</span>
+                                <span class="step-text"><strong>SQLite Embedded Store:</strong> Complex relational
+                                    queries for ERP service orders & offline queuing.</span>
+                            </div>
+                            <div class="flow-step">
+                                <span class="step-num">3</span>
+                                <span class="step-text"><strong>TanStack Query Optimistic Sync:</strong> Immediate UI
+                                    update with background rollback on mutation failure.</span>
+                            </div>
+                        </div>
+                        <div class="arch-meta">
+                            <span class="tech-badge">MMKV</span>
+                            <span class="tech-badge">SQLite</span>
+                            <span class="tech-badge">TanStack Query</span>
+                            <span class="tech-badge">Optimistic UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= EDUCATION & CREDENTIALS ================= -->
+        <section class="section education-section" id="education">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Academic Background</span>
+                    <h2 class="section-title">Education & Foundation</h2>
+                    <p class="section-lead">Solid computer science foundation powering 7+ years of professional
+                        engineering.</p>
+                </div>
+
+                <div class="education-card glass-card">
+                    <div class="edu-icon-col">
+                        <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    </div>
+                    <div class="edu-details-col">
+                        <div class="edu-header">
+                            <div>
+                                <h3 class="edu-degree">Master of Computer Applications (MCA)</h3>
+                                <h4 class="edu-institution">Kongu Engineering College, Erode</h4>
+                                <span class="edu-affil">Affiliated to Anna University, Chennai</span>
+                            </div>
+                            <div class="edu-year-badge">
+                                <i class="fa-regular fa-calendar-check"></i> 2017 – 2019
+                            </div>
+                        </div>
+                        <p class="edu-description">
+                            Comprehensive postgraduate coursework focusing on Advanced Data Structures, Object-Oriented
+                            Software Engineering, Database Management Systems, Distributed Computing, Mobile Application
+                            Development, and Web Technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT & CONNECT ================= -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Let's Build Something Exceptional Together</h2>
+                    <p class="section-lead">Looking for a Senior React & React Native Engineer to architect high-impact
+                        products? Feel free to reach out directly.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left: Contact Details Cards -->
+                    <div class="contact-info-col">
+                        <div class="contact-detail-card glass-card">
+                            <div class="c-icon text-cyan"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="c-content">
+                                <span class="c-label">Direct Email</span>
+                                <a href="mailto:thiruvenkadam.marasamy@gmail.com"
+                                    class="c-val">thiruvenkadam.marasamy@gmail.com</a>
+                            </div>
+                            <button class="copy-btn" data-copy="thiruvenkadam.marasamy@gmail.com" title="Copy Email">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="contact-detail-card glass-card">
+                            <div class="c-icon text-green"><i class="fa-solid fa-phone"></i></div>
+                            <div class="c-content">
+                                <span class="c-label">Direct Phone</span>
+                                <a href="tel:+919976056903" class="c-val">+91 99760 56903</a>
+                            </div>
+                            <button class="copy-btn" data-copy="+919976056903" title="Copy Phone">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="contact-detail-card glass-card">
+                            <div class="c-icon text-blue"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="c-content">
+                                <span class="c-label">LinkedIn Profile</span>
+                                <a href="https://linkedin.com/in/thiruvenkadam-marasamy/" target="_blank"
+                                    rel="noopener noreferrer" class="c-val">
+                                    linkedin.com/in/thiruvenkadam-marasamy/
+                                </a>
+                            </div>
+                            <a href="https://linkedin.com/in/thiruvenkadam-marasamy/" target="_blank"
+                                rel="noopener noreferrer" class="copy-btn" title="Open LinkedIn">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+
+                        <div class="contact-detail-card glass-card">
+                            <div class="c-icon text-orange"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="c-content">
+                                <span class="c-label">Location</span>
+                                <span class="c-val">Bengaluru, Karnataka, India</span>
+                            </div>
+                            <span class="loc-badge">Open to Global / Remote</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Message Form -->
+                    <div class="contact-form-col">
+                        <div class="contact-form-card glass-card">
+                            <h3 class="form-title"><i class="fa-solid fa-paper-plane"></i> Send Direct Message</h3>
+                            <p class="form-subtitle">Have an opening or project? Fill out the form below for an instant
+                                connection.</p>
+
+                            <form id="contact-form" class="contact-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="user-name">Your Name <span class="req">*</span></label>
+                                        <div class="input-wrap">
+                                            <i class="fa-regular fa-user input-icon"></i>
+                                            <input type="text" id="user-name" name="name" placeholder="John Doe"
+                                                required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="user-email">Your Email <span class="req">*</span></label>
+                                        <div class="input-wrap">
+                                            <i class="fa-regular fa-envelope input-icon"></i>
+                                            <input type="email" id="user-email" name="email"
+                                                placeholder="john@company.com" required />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="user-subject">Subject / Project Nature <span
+                                            class="req">*</span></label>
+                                    <div class="input-wrap">
+                                        <i class="fa-solid fa-tag input-icon"></i>
+                                        <input type="text" id="user-subject" name="subject"
+                                            placeholder="Senior React Native Engineer Role / Consulting" required />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="user-message">Message <span class="req">*</span></label>
+                                    <div class="input-wrap textarea-wrap">
+                                        <i class="fa-regular fa-comment-dots input-icon"></i>
+                                        <textarea id="user-message" name="message" rows="4"
+                                            placeholder="Hello Thiruvenkadam, we are looking for a Senior Engineer with your expertise in..."
+                                            required></textarea>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block submit-btn" id="submit-btn">
+                                    <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+                                    <span class="btn-loader d-none"><i class="fa-solid fa-spinner fa-spin"></i>
+                                        Transmitting...</span>
+                                </button>
+                                <div id="form-feedback" class="form-feedback"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#hero" class="brand-logo">
+                    <span class="logo-box">TM</span>
+                    <span class="logo-text">Thiruvenkadam Marasamy</span>
+                </a>
+                <p class="footer-tagline">Senior React & React Native Engineer | 7+ Years Enterprise Mobile & Web
+                    Architecture.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#contact">Contact</a>
+                <a href="#resume-modal" class="resume-trigger-btn">Resume</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Thiruvenkadam Marasamy. All Rights Reserved.</p>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/thiruvenkadam-marasamy/" target="_blank" rel="noopener noreferrer"
+                        title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:thiruvenkadam.marasamy@gmail.com" title="Email"><i
+                            class="fa-solid fa-envelope"></i></a>
+                    <a href="tel:+919976056903" title="Phone"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= RESUME MODAL & PRINT VIEW ================= -->
+    <div class="modal-overlay" id="resume-modal" aria-hidden="true">
+        <div class="modal-card resume-modal-card">
+            <div class="modal-header">
+                <div class="modal-title-wrap">
+                    <i class="fa-solid fa-file-pdf text-red"></i>
+                    <h3>Thiruvenkadam Marasamy — Professional Resume</h3>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-sm btn-primary" id="print-resume-btn" onclick="window.print()">
+                        <i class="fa-solid fa-print"></i> Print / Save PDF
+                    </button>
+                    <button class="modal-close-btn" id="close-resume-modal" aria-label="Close Modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-body resume-document-body" id="printable-resume">
+                <div class="res-doc-header">
+                    <h1 class="res-name">THIRUVENKADAM MARASAMY</h1>
+                    <h2 class="res-title">Senior React & React Native Engineer</h2>
+                    <div class="res-contact-bar">
+                        <span><i class="fa-solid fa-envelope"></i> thiruvenkadam.marasamy@gmail.com</span>
+                        <span><i class="fa-solid fa-phone"></i> +91 99760 56903</span>
+                        <span><i class="fa-brands fa-linkedin"></i> linkedin.com/in/thiruvenkadam-marasamy/</span>
+                        <span><i class="fa-solid fa-location-dot"></i> Bengaluru, India</span>
+                    </div>
+                </div>
+
+                <div class="res-section">
+                    <h3 class="res-sec-title">PROFESSIONAL SUMMARY</h3>
+                    <p class="res-summary-text">
+                        Senior React & React Native Engineer with 7 years of experience architecting and delivering
+                        scalable, cross-platform mobile and web applications using React Native, React.js, TypeScript,
+                        Node.js, Redux Toolkit, TanStack Query, GraphQL, Firebase, and AWS. Proven track record across
+                        Sports-Tech, ERP, QSR, Tourism, and IoT domains, owning end-to-end application architecture,
+                        performance optimization, real-time systems (MQTT), payment gateway integration, authentication,
+                        deep linking, and App Store / Play Store deployment in Agile/Scrum environments.
+                    </p>
+                </div>
+
+                <div class="res-section">
+                    <h3 class="res-sec-title">TECHNICAL SKILLS</h3>
+                    <div class="res-skills-list">
+                        <div class="res-skill-row"><strong>Mobile Development:</strong> React Native, Flutter</div>
+                        <div class="res-skill-row"><strong>Frontend:</strong> TypeScript, JavaScript, React.js, Next.js,
+                            Vue.js</div>
+                        <div class="res-skill-row"><strong>State Management:</strong> Redux Toolkit, TanStack Query
+                            (React Query), Zustand</div>
+                        <div class="res-skill-row"><strong>Backend / CMS:</strong> Node.js, Strapi CMS, REST APIs,
+                            GraphQL</div>
+                        <div class="res-skill-row"><strong>Real-Time & Cloud:</strong> MQTT, Firebase (Auth,
+                            Notifications, Analytics, Crashlytics), AWS (Cognito, Rekognition)</div>
+                        <div class="res-skill-row"><strong>Storage & Databases:</strong> AsyncStorage, MMKV, SQLite
+                        </div>
+                        <div class="res-skill-row"><strong>Payments:</strong> Razorpay, PhonePe, myFatoorah</div>
+                        <div class="res-skill-row"><strong>Platforms & Tools:</strong> Android Studio, Xcode, Google
+                            Play Store, Apple App Store, IBM MobileFirst</div>
+                        <div class="res-skill-row"><strong>Version Control:</strong> Git, GitHub, Bitbucket, GitLab
+                        </div>
+                        <div class="res-skill-row"><strong>Project Management:</strong> Jira, Microsoft Azure Boards
+                        </div>
+                        <div class="res-skill-row"><strong>Architecture:</strong> MVVM, Context API, Component-based,
+                            Feature-based</div>
+                    </div>
+                </div>
+
+                <div class="res-section">
+                    <h3 class="res-sec-title">WORK EXPERIENCE & PROJECTS</h3>
+
+                    <!-- Adecco -->
+                    <div class="res-exp-entry">
+                        <div class="res-entry-head">
+                            <div>
+                                <strong>Adecco India (Client: Cognizant Technology Solutions)</strong> | <em>React &
+                                    React Native Engineer</em>
+                            </div>
+                            <span class="res-date">Sep 2025 – Apr 2026</span>
+                        </div>
+                        <div class="res-sub-entry">
+                            <strong>KFC India – Restaurant Ordering App</strong>
+                            <ul>
+                                <li>Implemented the features to the KFC India React Native food ordering app, a
+                                    QR-code-based deep-link table ordering flow that streamlined the in-restaurant
+                                    customer ordering experience.</li>
+                                <li>Designed free-delivery banners, take-away food-preparation screens, and food-ready
+                                    push notification flows to improve order status visibility for customers.</li>
+                            </ul>
+                        </div>
+                        <div class="res-sub-entry">
+                            <strong>Royal Caribbean Cruises – Room Service Management App</strong>
+                            <ul>
+                                <li>Built core room-service ordering and status-tracking flows for a React with Next.js
+                                    app used by onboard guests, integrating deep linking and real-time order updates.
+                                </li>
+                                <li>Collaborated with cross-functional teams to deliver features aligned with enterprise
+                                    UX and reliability standards for a live cruise-ship environment.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ImpulseIdea -->
+                    <div class="res-exp-entry">
+                        <div class="res-entry-head">
+                            <div>
+                                <strong>ImpulseIdea Global LLC</strong> | <em>Senior Software Engineer</em>
+                            </div>
+                            <span class="res-date">Jul 2024 – Sep 2025</span>
+                        </div>
+                        <div class="res-sub-entry">
+                            <strong>Fan4ever – Sports Companion Platform (Badminton Ecosystem)</strong>
+                            <ul>
+                                <li>Architected and delivered Fan4ever, a multi-app sports companion ecosystem
+                                    (fan-facing app, club admin, umpire scoring, back-office, ad overlay, and website)
+                                    with real-time score sync, social-media features, live streaming, multi-language
+                                    support, and in-app payments; published on App Store and Play Store.</li>
+                                <li>Owned across the Fan4ever product suite: Fan4ever App (React Native, TypeScript,
+                                    Redux, MQTT, Firebase, Razorpay, Geolocation), Club Admin App (React Native, MVVM,
+                                    TanStack Query), Umpire Scorer App (Flutter, Dart, Hive-box), Back-Office Admin
+                                    (React.js, Redux, Node.js), Ad Overlay livestream tool (Vue.js, Strapi CMS), and the
+                                    Fan4ever website (React with Next.js, Strapi CMS).</li>
+                            </ul>
+                        </div>
+                        <div class="res-sub-entry">
+                            <strong>Video-Based KYC Verification</strong>
+                            <ul>
+                                <li>Developed a video-based KYC verification feature in React Native using AWS
+                                    Rekognition for facial recognition and automated text extraction from identity
+                                    documents, improving onboarding accuracy and reducing manual verification effort.
+                                </li>
+                                <li>Integrated Strapi CMS for dynamic content management across the KYC flow, enabling
+                                    faster content updates without app releases.</li>
+                            </ul>
+                        </div>
+                        <div class="res-sub-entry">
+                            <strong>Katara – Cultural Village Discovery App</strong>
+                            <ul>
+                                <li>Built Katara, a Flutter-based cultural discovery app for Katara Cultural Village
+                                    (Qatar), featuring museums, monuments, and points of interest with a Strapi
+                                    CMS-backed, user-friendly content interface.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- TekAfforde -->
+                    <div class="res-exp-entry">
+                        <div class="res-entry-head">
+                            <div>
+                                <strong>TekAfforde Solutions Pvt Ltd</strong> | <em>Software Engineer</em>
+                            </div>
+                            <span class="res-date">May 2019 – Jun 2024</span>
+                        </div>
+                        <div class="res-sub-entry">
+                            <strong>Irukkaa – Blue-Collar Job Search Platform</strong>
+                            <ul>
+                                <li>Built Irukkaa, a React Native blue-collar job search platform enabling workers to
+                                    find and post jobs by interest and location, with dual user roles (worker/resource
+                                    owner), real-time job alerts, and local product promotion features across
+                                    agriculture, construction, and manufacturing industries.</li>
+                                <li>Integrated Firebase Authentication and push notifications to drive user engagement
+                                    and real-time job alerting on Irukkaa.</li>
+                                <li>Built a Back-office Admin web app (React.js, Redux, Node.js) to manage users, job
+                                    postings, applications, and platform operations.</li>
+                            </ul>
+                        </div>
+                        <div class="res-sub-entry">
+                            <strong>Aerem – Smart Device Control App (IoT)</strong>
+                            <ul>
+                                <li>Built user authentication, multi-language support (English / Hindi), and remote
+                                    device management (ON/OFF/UV control) for Aerem IoT devices.</li>
+                                <li>Developed Wi-Fi setup flow, network connectivity management, homepage dashboard,
+                                    device detail view, and in-app user manual.</li>
+                            </ul>
+                        </div>
+                        <div class="res-sub-entry">
+                            <strong>TA Back-Office & Services – B2B ERP App</strong>
+                            <ul>
+                                <li>Developed a React Native B2B ERP application for the home-appliance and vehicle
+                                    service sectors.</li>
+                                <li>Integrated Firebase Auth, REST APIs, SQLite for data management, and Razorpay for
+                                    secure payment transactions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="res-section">
+                    <h3 class="res-sec-title">EDUCATION</h3>
+                    <div class="res-edu-row">
+                        <strong>Kongu Engineering College, Erode (Anna University, Chennai)</strong> | <em>Master of
+                            Computer Applications</em>
+                        <span class="res-date">2017 – 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= PROJECT DETAIL MODAL ================= -->
+    <div class="modal-overlay" id="project-modal" aria-hidden="true">
+        <div class="modal-card project-modal-card">
+            <div class="modal-header">
+                <div class="modal-title-wrap">
+                    <span id="modal-p-icon" class="modal-p-icon"><i class="fa-solid fa-mobile-screen"></i></span>
+                    <div>
+                        <h3 id="modal-p-title">Project Architecture Details</h3>
+                        <span id="modal-p-domain" class="modal-p-domain">Domain Overview</span>
+                    </div>
+                </div>
+                <button class="modal-close-btn" id="close-project-modal" aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-p-content">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= QUICK SEARCH COMMAND PALETTE (Ctrl+K) ================= -->
+    <div class="cmd-palette-overlay" id="cmd-palette" aria-hidden="true">
+        <div class="cmd-palette-modal">
+            <div class="cmd-search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="cmd-input"
+                    placeholder="Type to search projects, skills, experience, or contacts..." autocomplete="off" />
+                <button class="cmd-esc-btn" id="cmd-close-btn">ESC</button>
+            </div>
+            <div class="cmd-results" id="cmd-results">
+                <!-- Dynamically populated via JS -->
+            </div>
+            <div class="cmd-palette-footer">
+                <span><kbd>↑</kbd> <kbd>↓</kbd> to navigate</span>
+                <span><kbd>Enter</kbd> to select</span>
+                <span><kbd>Esc</kbd> to close</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TOAST NOTIFICATION ================= -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
